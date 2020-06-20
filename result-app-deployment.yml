@@ -18,7 +18,7 @@ spec:
         app: demo-voting-app
     spec:
       containers:
-        - mane: result-app
+        - name: result-app
           image: dockersamples/examplevotingapp_result
           ports:
-            containerPort: 80
+            - containerPort: 80

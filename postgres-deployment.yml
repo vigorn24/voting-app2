@@ -12,17 +12,15 @@ spec:
       app: demo-voting-app
   template:
     metadata:
-      name: postgres-pod
+      name: db
       labels:
         name: postgres-pod
         app: demo-voting-app
     spec:
       containers:
         - name: postgres
-          image: postgres:9.4
+          image: postgres:9.5
           env:
-          - name: POSTGRES_USER
-            value: "postgres"
           - name:  POSTGRES_PASSWORD
             value: "postgres"
           ports:
